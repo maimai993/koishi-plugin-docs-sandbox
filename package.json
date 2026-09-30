@@ -1,0 +1,62 @@
+{
+  "name": "koishi-plugin-docs-sandbox",
+  "version": "1.0.0",
+  "description": "【自用】把 bot 的真实指令变成在线沙盒 API：文档站 / 控制台都能直接试运行指令，支持多轮会话、图片、语音（SILK 转码）与文件",
+  "main": "lib/index.js",
+  "files": [
+    "lib",
+    "dist",
+    "assets",
+    "scripts",
+    "readme.md"
+  ],
+  "license": "GPL-3.0-only",
+  "author": "maimai2025 <2237886846@qq.com>",
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/maimai993/koishi-plugin-docs-sandbox.git"
+  },
+  "bugs": {
+    "url": "https://github.com/maimai993/koishi-plugin-docs-sandbox/issues"
+  },
+  "homepage": "https://github.com/maimai993/koishi-plugin-docs-sandbox#readme",
+  "keywords": [
+    "koishi",
+    "plugin",
+    "chatbot",
+    "sandbox",
+    "api",
+    "docs",
+    "playground",
+    "self-use",
+    "kkk"
+  ],
+  "koishi": {
+    "description": {
+      "zh": "【自用】把运行中的 bot 指令暴露成 HTTP API，并自带聊天式试运行界面（挂在 /sandbox，控制台侧边栏也有入口）。支持多轮会话（插件按频道存的状态能延续）、图片、语音（SILK 自动转 WAV）与文件收发；默认屏蔽能执行 shell / 改数据库 / 后台管理的指令，带限流与可选密钥。",
+      "en": "[Personal use] Expose the running bot's commands as an HTTP sandbox API, with a built-in chat UI. Supports multi-turn sessions, images, voice (SILK auto-transcoded) and files."
+    },
+    "service": {
+      "required": [
+        "server"
+      ],
+      "optional": [
+        "console",
+        "database",
+        "http",
+        "silk",
+        "ffmpeg"
+      ]
+    }
+  },
+  "peerDependencies": {
+    "koishi": "^4.18.7"
+  },
+  "devDependencies": {
+    "koishi": "^4.18.7"
+  }
+}
